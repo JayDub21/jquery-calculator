@@ -78,7 +78,27 @@
 $(document).ready(function() {
 
 // Your code here...
-
+var firstNumber = "";
+var operatorClicked = false;
+$('.number').on("click", function(event){
+  if(!operatorClicked){
+  // console.log(event.currentTarget.value);
+  firstNumber += event.currentTarget.value;
+  console.log(firstNumber);
+  }else{
+    //we should be building our second number
+  }
+})
+$('.operator').on("click", function(event){
+  console.log(event.currentTarget.value);
+  operatorClicked = true;
+})
+$('.equal').on("click", function(event){
+  console.log(event.currentTarget.value);
+})
+$('.clear').on("click", function(event){
+  console.log(event.currentTarget.value);
+})
 
 });
 
