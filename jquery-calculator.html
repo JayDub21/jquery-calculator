@@ -62,6 +62,7 @@
       </div>
     </div>
   </div>
+<<<<<<< HEAD
   <script type="text/javascript">
     $(document).ready(function () {
       var firstNumberEl = $("#first-number");
@@ -134,5 +135,80 @@
       })
     });
   </script>
+=======
+
+<script type="text/javascript">
+
+var firstNumberEl = $("#first-number");
+var secondNumberEl = $("#second-number");
+var operatorEl = $("#operator");
+var resultEl = $("#result");
+
+$(document).ready(function() {
+
+// Your code here...
+var firstNumber = "";
+var secondNumber = "";
+var operatorClicked = false;
+<<<<<<< HEAD
+var equalClicked= false;
+=======
+var equalClicked = false;
+>>>>>>> e462f55720f8e143bcd7cc522eae8744a880459a
+$('.number').on("click", function(event){
+  if(!operatorClicked){
+  // console.log(event.currentTarget.value);
+  firstNumber += event.currentTarget.value; //keeps the first number and lets you add more behind it
+  console.log(firstNumber);
+<<<<<<< HEAD
+  }if(operatorClicked) {
+    //we should be building our second number 
+      secondNumber += event.currentTarget.value;
+      console.log(secondNumber);
+    
+=======
+  } if (operatorClicked && !equalClicked) {
+    //we should be building our second number
+    secondNumber += event.currentTarget.value;
+    console.log(secondNumber);
+>>>>>>> e462f55720f8e143bcd7cc522eae8744a880459a
+  }
+ 
+})
+$('.operator').on("click", function(event){
+  console.log(event.currentTarget.value);
+  operatorClicked = true;
+})
+$('.equal').on("click", function(event){
+<<<<<<< HEAD
+  var num1 = parseInt(firstNumber);
+  var num2 = parseInt(secondNumber);
+  if(equalClicked){
+  console.log(parseInt(firstNumber) + parseInt(secondNumber));
+  equalClicked= true;
+}
+=======
+  console.log(event.currentTarget.value);
+  equalClicked = true;
+  console.log(parseInt(firstNumber) + parseInt(secondNumber));
+})
+>>>>>>> e462f55720f8e143bcd7cc522eae8744a880459a
+$('.clear').on("click", function(event){
+  var reslut = 0;
+  firstNumber = "";
+  firstNumberEl.text("");
+  secondNumber = "";
+  secondNumberEl.text("");
+  operator = "";
+  operatorEl.text("");
+  operatorClicked = false;
+  console.log(event.currentTarget.value);
+})
+
+});
+
+</script>
+
+>>>>>>> 1370794cb43a30fda6a21bd85874d4487ac7b33f
 </body>
 </html>
