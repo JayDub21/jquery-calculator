@@ -79,14 +79,18 @@ $(document).ready(function() {
 
 // Your code here...
 var firstNumber = "";
+var secondNumber = "";
 var operatorClicked = false;
+var equalClicked = false;
 $('.number').on("click", function(event){
   if(!operatorClicked){
   // console.log(event.currentTarget.value);
   firstNumber += event.currentTarget.value;
   console.log(firstNumber);
-  }else{
+  } if (operatorClicked && !equalClicked) {
     //we should be building our second number
+    secondNumber += event.currentTarget.value;
+    console.log(secondNumber);
   }
 })
 $('.operator').on("click", function(event){
@@ -95,6 +99,8 @@ $('.operator').on("click", function(event){
 })
 $('.equal').on("click", function(event){
   console.log(event.currentTarget.value);
+  equalClicked = true;
+  console.log(parseInt(firstNumber) + parseInt(secondNumber));
 })
 $('.clear').on("click", function(event){
   console.log(event.currentTarget.value);
