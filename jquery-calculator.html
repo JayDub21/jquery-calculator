@@ -75,6 +75,11 @@
 
 <script type="text/javascript">
 
+var firstNumberEl = $("#first-number");
+var secondNumberEl = $("#second-number");
+var operatorEl = $("#operator");
+var resultEl = $("#result");
+
 $(document).ready(function() {
 
 // Your code here...
@@ -100,10 +105,21 @@ $('.operator').on("click", function(event){
   operatorClicked = true;
 })
 $('.equal').on("click", function(event){
+  var num1 = parseInt(firstNumber);
+  var num2 = parseInt(secondNumber);
+  if(equalClicked){
   console.log(parseInt(firstNumber) + parseInt(secondNumber));
   equalClicked= true;
-})
+}
 $('.clear').on("click", function(event){
+  var reslut = 0;
+  firstNumber = "";
+  firstNumberEl.text("");
+  secondNumber = "";
+  secondNumberEl.text("");
+  operator = "";
+  operatorEl.text("");
+  operatorClicked = false;
   console.log(event.currentTarget.value);
 })
 
